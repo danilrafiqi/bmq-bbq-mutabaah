@@ -15,13 +15,13 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->check() && $request->user()->role == 'admin'){
-            return $next($request);
-        }else{
-            die('dodol');
-        }
-        return redirect()->guest('/login');
-
+        // if(auth()->check() && $request->user()->role == 'admin'){
+        //     return $next($request);
+        // }else{
+        //     die('dodol');
+        // }
+        // return redirect()->guest('/login');
+        die('halo');
         // if(auth()->check() && $request->user()->admin == 1){
         //     return $next($request);
         // }

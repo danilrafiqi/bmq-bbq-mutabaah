@@ -20,8 +20,9 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/box.css') }}" rel="stylesheet">    
+    <link href="{{ asset('css/appnew.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/box.css') }}" rel="stylesheet">
+    <link href="{{ asset('fontawesome/css/font-awesome.css') }}" rel="stylesheet">    
     <link href="{{ asset('bootstrap-slider/bootstrap-slider.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -74,6 +75,13 @@
         <main class="py-4">
             @yield('content')    
         </main>
+        <div class="container">
+            © 2018. Created by 
+            <a href="https://rafibanget.blogspot.com">Danilrafiqi</a>
+            <br>
+        </div>
     </div>
+    <script src="{{ asset('js/Chart.bundle.js') }}"></script>
+    <script src="{{ asset('js/Chart.js') }}"></script>        
 </body>
 </html>

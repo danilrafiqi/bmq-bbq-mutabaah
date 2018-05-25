@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('employees/liat', 'EmployeeController@liat');
 
 
-Route::resource('employees', 'EmployeeController')->middleware('auth','admin');
+Route::resource('employees', 'EmployeeController')->middleware('auth','isadmin');
 
 
 
@@ -41,9 +41,9 @@ Route::get('/pdf', 'HomeController@pdfku')->name('home');
 //     'except' => ['index']
 // ])->middleware('auth');
 // Route::get('mutabaah', 'MutabaahController@index')->middleware('auth', 'admin');
-Route::resource('tes', 'MutabaahController')->middleware('auth','admin');
+Route::resource('tes', 'MutabaahController')->middleware('isadmin');
 
-Route::resource('mutabaah', 'MutabaahController')->middleware('auth', 'admin');
+Route::resource('mutabaah', 'MutabaahController')->middleware('auth', 'isadmin');
 
 
 

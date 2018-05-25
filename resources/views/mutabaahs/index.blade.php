@@ -11,8 +11,6 @@
                         <a href="{{action('MutabaahController@create')}}" class="btn btn-primary btn-sm">
                             Tambah Pengguna Baru
                         </a>
-<a href="{{action('MutabaahController@downloadExcel', 'csv')}}" class="btn btn-warning">Edit</a>
-
                     </div>
                 </div>        
               
@@ -29,8 +27,11 @@
                             </div>
                         </div>
                     </form>
-                <div class="box-body table-responsive no-padding">
 
+                <div class="box-body table-responsive no-padding">
+<a href="{{action('MutabaahController@downloadExcel', 'csv')}}" class="btn btn-success">CSV</a>
+<a href="{{action('MutabaahController@downloadExcel', 'xls')}}" class="btn btn-success">XLS</a>
+<a href="{{action('MutabaahController@downloadExcel', 'csv')}}" class="btn btn-danger">PDF</a>
                     @if (\Session::has('success'))
                       <div class="alert alert-success">
                         <p>{{ \Session::get('success') }}</p>
