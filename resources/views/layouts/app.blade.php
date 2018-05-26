@@ -22,6 +22,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/adminlte.css') }}" rel="stylesheet">
     <link href="{{ asset('css/box.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome/css/font-awesome.css') }}" rel="stylesheet">    
     <link href="{{ asset('bootstrap-slider/bootstrap-slider.css') }}" rel="stylesheet">

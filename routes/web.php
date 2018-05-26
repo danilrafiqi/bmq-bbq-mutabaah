@@ -48,7 +48,7 @@ Route::get('mutabaah/download/{type}', 'MutabaahController@download');
 Route::resource('prodi', 'ProdiController');
 
 
-
+Route::get('admin', 'DashboardAdminController@dashboard');
 
 
 
