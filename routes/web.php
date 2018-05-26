@@ -24,7 +24,6 @@ Route::resource('employees', 'EmployeeController')->middleware('auth','isadmin')
 
 Route::resource('mahasiswa', 'MahasiswaController');
 
-Route::resource('prodi', 'ProdiController');
 
 Auth::routes();
 
@@ -44,11 +43,12 @@ Route::get('/pdf', 'HomeController@pdfku')->name('home');
 Route::resource('tes', 'MutabaahController')->middleware('isadmin');
 
 Route::resource('mutabaah', 'MutabaahController')->middleware('auth', 'isadmin');
+Route::get('mutabaah/download/{type}', 'MutabaahController@download');
+
+Route::resource('prodi', 'ProdiController');
 
 
 
 
 
 
-
-Route::get('downloadExcel/{type}', 'MutabaahController@downloadExcel');

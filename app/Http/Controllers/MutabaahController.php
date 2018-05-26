@@ -24,7 +24,7 @@ class MutabaahController extends Controller
 
         $mutabaahs->appends($request->only('keyword'));
 
-        return view('mutabaahs.index',compact('mutabaahs'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin.mutabaahs.index',compact('mutabaahs'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -36,7 +36,7 @@ class MutabaahController extends Controller
     {
         //
         $npm = $request->user()->npm;
-        return view('mutabaahs.create', compact('npm'));        
+        return view('admin.mutabaahs.create', compact('npm'));        
     }
 
     /**
@@ -90,7 +90,7 @@ class MutabaahController extends Controller
     {
         //
         $mutabaah = Mutabaah::find($id);
-        return view('mutabaahs.edit',compact('mutabaah','id'));
+        return view('admin.mutabaahs.edit',compact('mutabaah','id'));
     }
 
     /**
@@ -157,7 +157,7 @@ class MutabaahController extends Controller
 
 
     //Export Excel
-    public function downloadExcel($type)
+    public function download($type)
     {
         $data = Mutabaah::get()->toArray();
         return Excel::create('laporan', function($excel) use ($data) {

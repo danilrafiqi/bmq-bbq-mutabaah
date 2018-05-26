@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet"> -->
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/appnew.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/box.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome/css/font-awesome.css') }}" rel="stylesheet">    
     <link href="{{ asset('bootstrap-slider/bootstrap-slider.css') }}" rel="stylesheet">
@@ -73,7 +74,11 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')    
+            <div class="container">
+                <div class="row">            
+                    @yield('content')    
+                </div>
+            </div>
         </main>
         <div class="container">
             © 2018. Created by 

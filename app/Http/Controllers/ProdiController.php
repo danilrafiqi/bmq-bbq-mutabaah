@@ -21,7 +21,7 @@ class ProdiController extends Controller
 
         $prodis->appends($request->only('keyword'));
 
-        return view('prodis.index',compact('prodis'))->with('i', (request()->input('page', 1) - 1) * 5);          
+        return view('admin.prodis.index',compact('prodis'))->with('i', (request()->input('page', 1) - 1) * 5);          
     }
 
     /**
@@ -32,7 +32,7 @@ class ProdiController extends Controller
     public function create()
     {
         //
-        return view('prodis.create');
+        return view('admin.prodis.create');
     }
 
     /**
@@ -74,7 +74,7 @@ class ProdiController extends Controller
     {
         //
         $prodi = Prodi::find($id);
-        return view('prodis.edit',compact('prodi','id'));
+        return view('admin.prodis.edit',compact('prodi','id'));
     }
 
     /**
