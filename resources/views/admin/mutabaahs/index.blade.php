@@ -2,7 +2,7 @@
 
 @section('content')
     @include('admin.sidebar')
-        <div class="col-md-9">
+        <div class="col-md-10">
             <div class="card">
                 @if (\Session::has('success'))
                   <div class="alert alert-success">

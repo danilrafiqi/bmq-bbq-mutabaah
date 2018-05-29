@@ -75,7 +75,7 @@
         </nav>
 
         <main class="py-4">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">            
                     @yield('content')    
                 </div>
@@ -87,7 +87,6 @@
             <br>
         </div>
     </div>
-    <script src="{{ asset('js/Chart.bundle.js') }}"></script>
-    <script src="{{ asset('js/Chart.js') }}"></script>        
+
 </body>
 </html>

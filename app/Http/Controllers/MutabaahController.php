@@ -19,8 +19,8 @@ class MutabaahController extends Controller
 
 
         $mutabaahs = Mutabaah::when($request->keyword, function ($query) use ($request) {
-            $query->where('id', 'like', "%{$request->keyword}%");
-        })->orderBy('npm')->orderBy('minggu')->latest()->paginate(5);
+            $query->where('npm', 'like', "%{$request->keyword}%");
+        })->orderBy('npm')->orderBy('minggu')->latest()->paginate(10);
 
         $mutabaahs->appends($request->only('keyword'));
 
